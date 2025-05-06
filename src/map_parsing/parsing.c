@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cub.h                                              :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lscheupl <lscheupl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 15:40:42 by lscheupl          #+#    #+#             */
-/*   Updated: 2025/05/06 17:52:31 by lscheupl         ###   ########.fr       */
+/*   Created: 2025/05/06 16:54:51 by lscheupl          #+#    #+#             */
+/*   Updated: 2025/05/06 17:36:00 by lscheupl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB_H
-# define CUB_H
+#include "../../inc/Cub.h"
 
-# include "../Libft2/libft.h"
-# include <stdbool.h>
-# include <stdio.h>
-
-typedef struct s_map_data
+int parsing(char *map_name, t_map_data *data)
 {
-	char	**doc;
-	char	**map;
+    int status;
 
-}			t_map_data;
-
-typedef enum s_parse_error
-{
-	success,
-	no_map,
-	suffix_error,
-	wrong_name,
-}			t_parse_error;
-
-/*parsing*/
-
-int			parsing(char *map_name, t_map_data *data);
-int			verify_name(char *map_name);
-
-/**/
-
-#endif
+    status = verify_name(map_name);
+    (void)data;
+    return (printf("%d\n", status));
+}

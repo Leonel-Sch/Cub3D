@@ -6,7 +6,7 @@
 #    By: lscheupl <lscheupl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/23 15:34:23 by lscheupl          #+#    #+#              #
-#    Updated: 2025/04/23 18:27:18 by lscheupl         ###   ########.fr        #
+#    Updated: 2025/05/06 17:07:39 by lscheupl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME = cub3D
 CC = cc -Wall -Wextra -Werror -g3
 
 SRC = src/main.c
+SRC += src/map_parsing/parsing.c
+SRC += src/map_parsing/verify_name.c
 
 OBJ = $(SRC:.c=.o)
 
