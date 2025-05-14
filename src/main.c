@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lscheupl <lscheupl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leonel <leonel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:40:20 by lscheupl          #+#    #+#             */
-/*   Updated: 2025/05/06 17:06:48 by lscheupl         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:59:55 by leonel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int cub3D(char *map_name)
     int status;
 
     status = parsing(map_name, &data);
-    return (0);
+    return (status);
 }
 
 int main(int argc, char **argv)

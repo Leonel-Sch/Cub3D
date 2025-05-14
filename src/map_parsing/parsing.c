@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lscheupl <lscheupl@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leonel <leonel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:54:51 by lscheupl          #+#    #+#             */
-/*   Updated: 2025/05/06 17:36:00 by lscheupl         ###   ########.fr       */
+/*   Updated: 2025/05/07 17:38:55 by leonel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int parsing(char *map_name, t_map_data *data)
     int status;
 
     status = verify_name(map_name);
-    (void)data;
+    if (status != 0)
+        return(error_name(status), status);
+    
     return (printf("%d\n", status));
 }

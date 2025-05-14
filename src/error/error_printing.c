@@ -1,43 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cub.h                                              :+:      :+:    :+:   */
+/*   error_printing.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leonel <leonel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 15:40:42 by lscheupl          #+#    #+#             */
-/*   Updated: 2025/05/07 16:32:32 by leonel           ###   ########.fr       */
+/*   Created: 2025/05/07 17:39:24 by leonel            #+#    #+#             */
+/*   Updated: 2025/05/09 16:22:30 by leonel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB_H
-# define CUB_H
+#include "../../inc/Cub.h"
 
-# include "../Libft2/libft.h"
-# include <stdbool.h>
-# include <stdio.h>
-
-typedef struct s_map_data
+void error_name(int status)
 {
-	char	**doc;
-	char	**map;
-
-}			t_map_data;
-
-typedef enum s_parse_error
-{
-	success,
-	no_map,
-	suffix_error,
-	wrong_name,
-	wrong_access,
-}			t_parse_error;
-
-/*parsing*/
-
-int			parsing(char *map_name, t_map_data *data);
-int			verify_name(char *map_name);
-
-/**/
-
-#endif
+    
+}
