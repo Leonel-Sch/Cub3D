@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cub.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonel <leonel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lscheupl <lscheupl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:40:42 by lscheupl          #+#    #+#             */
-/*   Updated: 2025/05/07 16:32:32 by leonel           ###   ########.fr       */
+/*   Updated: 2025/05/16 16:03:50 by lscheupl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef enum s_parse_error
 
 int			parsing(char *map_name, t_map_data *data);
 int			verify_name(char *map_name);
+void		error_name(int status);
 
 /**/
 

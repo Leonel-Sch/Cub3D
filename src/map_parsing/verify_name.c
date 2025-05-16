@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verify_name.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonel <leonel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lscheupl <lscheupl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 16:57:30 by lscheupl          #+#    #+#             */
-/*   Updated: 2025/05/07 17:37:32 by leonel           ###   ########.fr       */
+/*   Updated: 2025/05/16 16:26:36 by lscheupl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,16 @@ bool	name_check(char *map_name)
 bool exist_check(char *map_name)
 {
     int fd;
+	int bytes;
     
     fd = open(map_name, O_RDONLY, 0644);
     if (fd < 0)
+	{
         return (false);
+	}
+	bytes = read(fd, NULL, 1);
+	if (bytes < 1)
+		return(false);
     return (close(fd), true);
 }
 
